@@ -40,8 +40,8 @@ class VGCL(Base_CF):
         ### reparameterization
         noise1 = tf.random_normal(std.shape)
         noise2 = tf.random_normal(std.shape)
-        noised_emb1 = mean + 0.01 * std * noise1
-        noised_emb2 = mean + 0.01 * std * noise2
+        noised_emb1 = mean + std * noise1
+        noised_emb2 = mean + std * noise2
         return noised_emb1, noised_emb2, mean, std
 
 
