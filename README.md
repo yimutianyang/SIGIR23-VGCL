@@ -20,7 +20,7 @@ Prerequisites
 
 Usage
 -----
-python run_VGCL.py --dataset douban_book
+* python run_VGCL.py --dataset douban_book
 
 Citation
 --------
