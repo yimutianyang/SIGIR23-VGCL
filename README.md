@@ -1,7 +1,7 @@
 # SIGIR23-VGCL
 Implementation of our SIGIR 2023 accepted paper "Generative-Contrastive Graph Learning for Recommendation".
 PDF file is here: https://le-wu.com/files/Publications/CONFERENCES/SIGIR-23-yang.pdf
-![](https://github.com/yimutianyang/SIGIR23-VGCL/blob/main/framework.pdf)
+![](https://github.com/yimutianyang/SIGIR23-VGCL/blob/main/framework.jpg)
 
 In this work, we investigate GCL-based recommendation from the perspective of better contrastive view construction, and propose a
 novel Variational Graph Generative-Contrastive Learning (VGCL) framework. Instead of data augmentation, we leverage the variational
