@@ -145,19 +145,8 @@ if __name__ == '__main__':
 
     #***********************************  start evaluate testdata   ********************************#
     writer.close()
-    u1, u2, u3, u4, u5 = rec_data._user_group()
     saver.restore(sess, model_save_path + best_ckpt)
     user_matrix, item_matrix = sess.run([rec_model.user_emb, rec_model.item_emb])
-    hr, recall, ndcg = num_faiss_evaluate(rec_data.testdata, rec_data.traindata, [20], user_matrix, item_matrix, u1)
-    log.write('Group1, topk:{:d}, recall:{:.4f}, ndcg{:.4f}\n'.format(20, recall[20], ndcg[20]))
-    hr, recall, ndcg = num_faiss_evaluate(rec_data.testdata, rec_data.traindata, [20], user_matrix, item_matrix, u2)
-    log.write('Group2, topk:{:d}, recall:{:.4f}, ndcg{:.4f}\n'.format(20, recall[20], ndcg[20]))
-    hr, recall, ndcg = num_faiss_evaluate(rec_data.testdata, rec_data.traindata, [20], user_matrix, item_matrix, u3)
-    log.write('Group3, topk:{:d}, recall:{:.4f}, ndcg{:.4f}\n'.format(20, recall[20], ndcg[20]))
-    hr, recall, ndcg = num_faiss_evaluate(rec_data.testdata, rec_data.traindata, [20], user_matrix, item_matrix, u4)
-    log.write('Group4, topk:{:d}, recall:{:.4f}, ndcg{:.4f}\n'.format(20, recall[20], ndcg[20]))
-    hr, recall, ndcg = num_faiss_evaluate(rec_data.testdata, rec_data.traindata, [20], user_matrix, item_matrix, u5)
-    log.write('Group5, topk:{:d}, recall:{:.4f}, ndcg{:.4f}\n'.format(20, recall[20], ndcg[20]))
     hr, recall, ndcg = num_faiss_evaluate(rec_data.testdata, rec_data.traindata,
                                           [5,10,20,30,40,50,60,70,80,90,100], user_matrix, item_matrix, rec_data.testdata.keys())
     for key in ndcg.keys():
