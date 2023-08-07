@@ -34,7 +34,7 @@ class CF_Dataset(object):
         self.traindata = np.load(self.data_path + 'traindata.npy', allow_pickle=True).tolist()
         self.testdata = np.load(self.data_path + 'testdata.npy', allow_pickle=True).tolist()
         self.num_user, self.num_item = self.max_user_and_item()
-        pdb.set_trace()
+        #pdb.set_trace()
         self.num_node = self.num_user + self.num_item
         self.training_user, self.training_item = [], []
         for u, items in self.traindata.items():
