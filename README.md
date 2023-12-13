@@ -20,7 +20,9 @@ Prerequisites
 
 Usage
 -----
-* python run_VGCL.py --dataset douban_book
+* python run_VGCL.py --dataset douban_book --gcn_layer 2 --alpha 0.2 --gamma 0.4 --temp_cluster 0.13 --num_user_cluster 900 --num_item_cluster 300
+* python run_VGCL.py --dataset dianping --gcn_layer 3 --alpha 0.05 --gamma 0.5 --temp_cluster 0.15 --num_user_cluster 500 --num_item_cluster 100
+* python run_VGCL.py --dataset ml25m --gcn_layer 3 --alpha 0.1 --gamma 1.0 --temp_cluster 0.08 --num_user_cluster 1200 --num_item_cluster 100 --batch_size 4096
 
 Citation
 --------
