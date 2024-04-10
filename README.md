@@ -16,7 +16,7 @@ in a cluster. Empirical studies on three public datasets clearly show the effect
 
 Prerequisites
 -------------
-* Please refer requirements.txt
+* Please refer to requirements.txt
 
 Usage
 -----
